@@ -1,0 +1,27 @@
+<section>
+  <div class="col-sm-12">
+    <div id="tabs">
+      <h3>My Profile</h3>
+      <ul>
+        <li><a href="#tabs-1">background</a></li>
+        <li><a href="#tabs-2">Skills</a></li>
+        <li><a href="#tabs-3">Links</a></li>
+      </ul>
+      <div id="tabs-1">
+        <p></P>
+        <ol>
+          <li>Calculator</li>
+          <li>Converter</li>
+          <li>Measuring tools</li>
+          <li>Contact list</li>
+        </ol>
+      </div>
+      <div id="tabs-2">
+        <p></p>
+      </div>
+      <div id="tabs-3">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</section>
