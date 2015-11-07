@@ -69,3 +69,21 @@ $.getElementsByClassName('instagram')({
   success: success,
   dataType: dataType
 });
+githubReposurl = 'https://api.github.com/users/terencegit/repos';
+$.get(githubReposurl, function(repositories)  {
+//parse data object
+  projectlistTemplate ='';
+  projectlistTemplate += '<ul>';
+
+  repositories.forEach(function(repository)
+  {
+    projectlistTemplate += '<li>';
+    projectlistTemplate += '<h2><a href="#">Introduction to bootstrap</h2>';
+
+  });
+
+  //+ '<li>' + '<h2><a href="#">Introduction to Bootstrap></h2>' + '<p>My Project description</p>' + '<a href="#">Teams working on projects</a>' + '<li>' + '</ul>';
+
+$('#open-source-content').html(projectlistTemplate);
+
+});
