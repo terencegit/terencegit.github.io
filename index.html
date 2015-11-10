@@ -1,16 +1,15 @@
 <!doctype html>
-<html>
-
+<html ng-app="">
 <head>
-  <!-- this internationalizes the content of the website// -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maisha Media Works</title>
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/index.css" />
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/jquery-ui.css" />
+  <script src="bootstrap-3.3.5-dist/js/angular.min.js"></script>
 </head>
 
-<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />
-<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/index.css" />
-<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/jquery-ui.css" />
 
 <body>
   <div class="container-fluid">
@@ -82,7 +81,37 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
     </footer>
-    <br>
+
+
+    <section class = "row" id ="angular">
+      <h1 class="text-center">Simple Data Binding</h1>
+
+      <div class="col-sm-6">
+        <input type="text" ng-model="username" placeholder="Enter Username Here"/>
+        <h1 ng-bind="username"></h1>
+        <h1>Simple Interest Calculator</h1>
+
+        <input type="number" ng-model="principal" placeholder="Enter Your amount"/><br/>
+
+        <input type="number" ng-model="rate" placeholder="Enter rate i.e 8"/><br/>
+
+        <input type="number" ng-model="time" placeholder="Enter time in Years"/><br/>
+        <h2 ng-bind = "principal"></h2>
+        <p ng-bind ="rate" ></p>
+        <p ng-bind ="period" ></p>
+
+        <h3>Your principal is: {{principal}}</h3>
+        <input type="number" ng-bind="rate"><h3>Your rate is: {{rate}}</h3>
+        <h3>Your period is: {{time}}</h3>
+        <h3>Your SI is:{{principal*rate*time}}</h3>
+
+      </div>
+
+      <div class="col-sm-6">
+
+      </div>
+    </section>
+
     <section class="row col-sm img-responsive">
       <a class="col-sm-3" href="https://www.facebook.com/terencegit/" target="_blank">
         <img class="img-responsive" border="0" alt="facebook" src="bootstrap-3.3.5-dist/images/Facebook-128.png" width="30" height="30">
@@ -93,9 +122,6 @@
             <a class="col-sm-3" href="https://www.instagram.com/" target="_blank">
               <img class="img-responsive" border="0" alt="instagram" src="bootstrap-3.3.5-dist/images/instagram-128.png" width="30" height="30">
     </section>
-    <br>
-
-
     <script src="bootstrap-3.3.5-dist/js/jquery-1.11.3.js"></script>
     <script src="bootstrap-3.3.5-dist/js/jquerysimple.js"></script>
     <script src="bootstrap-3.3.5-dist/js/jquery-ui.js"></script>
