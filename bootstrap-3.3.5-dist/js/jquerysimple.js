@@ -1,4 +1,5 @@
 //check if document has loaded//
+
 $(document).ready(function() {
   $("#pitch > h1").mouseenter(function() {
     $("h1").fadeOut(1000).fadeIn(1000);
@@ -85,5 +86,12 @@ $.get(githubReposurl, function(repositories)  {
   //+ '<li>' + '<h2><a href="#">Introduction to Bootstrap></h2>' + '<p>My Project description</p>' + '<a href="#">Teams working on projects</a>' + '<li>' + '</ul>';
 
 $('#open-source-content').html(projectlistTemplate);
+
+nodeServerUrl = 'http;//127.0.0.1:8081';
+dataHandler = function(data){
+console.log(data);
+};
+$.get(URL, dataHandler)
+
 
 });

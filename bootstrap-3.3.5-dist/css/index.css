@@ -16,5 +16,10 @@ body {
   color: #AD4E4C;
 }
 body {
-  background-image: url('https://googledrive.com/host/0B0RTlVpNFM-GfkRsWVdJOXJaZkJIQXV5OXRhcDZEVFBfb0ZMak9TOWJhNnFEZ1ZYZ0Y0blU/simple-wallpapers-photo-HeTF.jpg')
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFtifJT5kcugThfdSV8icruKJ7eL06XYstsWNNbucCOw2xu-s1');
+  background-repeat;
+  no repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px 0px;
 }
