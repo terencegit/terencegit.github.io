@@ -1,165 +1,162 @@
 <!doctype html>
 <html ng-app="myApp">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terence Munene Profile</title>
-  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/index.css" />
-  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/jquery-ui.css" />
-  <script src="bootstrap-3.3.5-dist/js/angular.min.js"></script>
-  <script src="bootstrap-3.3.5-dist/js/appcontroller.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Terence Munene Profile</title>
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/index.css" />
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/jquery-ui.css" />
+    <script src="bootstrap-3.3.5-dist/js/angular.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/appcontroller.js"></script>
 </head>
 
-
 <body>
-  <div class="container-fluid">
-    <section class="row text-center jumbotron" id="pitch">
-      <h1 id="name">Terence Munene</h1>
-      <a href="#Works" class="btn btn-success">+254 0732 20 72 72</a>
-    </section>
-    <br>
-    <section>
-      <div class="col-sm-12">
-        <div id="tabs">
-          <h3>My Applications</h3>
-          <ul>
-            <li><a href="#tabs-1">fundiApp</a></li>
-            <li><a href="#tabs-2">OpenSkul</a></li>
-            <li><a href="#tabs-3">ShambaLink</a></li>
-          </ul>
-          <div id="tabs-1">
-            <p>FundiApp is an java based app that can run on android designed with the local mason in mind!
-              <br> It is equipped with all the basic and fundamental tools a mason needs but may not be having access to.
-              <br> Here is a list of tools available:</P>
-            <ol>
-              <li>Calculator</li>
-              <li>Converter</li>
-              <li>Measuring tools</li>
-              <li>Contact list</li>
-            </ol>
-          </div>
-          <div id="tabs-2">
-            <p>OpenSkul is an android app that assists homed based tuitioning find an appropriate curriculum based on succesful models worldwide.
-              <br> It indentifies childrens' needs according their age and learning capacity and
-              <br> recommends an appropriate homebased lesson plan!
-              <br> This app is available in android, windows and mac os.
-            </p>
-          </div>
-          <div id="tabs-3">
-            <p>Have you ever wondered wether a piece of property that you're interested in buying is duly registered of any legal and debt issues?</p>
-            <p>.....Well worry no more! ShambaLink connects you to properties and Land that have been thoroughly checked out through the various
-              <br> Institutions!
-              <br> Furthermore, it also shows you the exact co-ordinants of the particular property on google maps.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="row">
-<h1></h1>
-<div>
-  <id"open-source-content">
-  <p class="text-center">Loading .....</a>
-</div>
-    </section>
-<section class ="row">
-        <h1 class="text-center">Cars Profile</h1>
-          <div class="col-sm-12" ng-controller="myCars">
-
-          <input align="center" type="text" ng-model="test"/>
-
-            <table align="center" border="3" width="80%">
-              <tr ng-repeat ="x in cars | filter:test">
-                  <td>{{x.brand}}</td>
-                  <td>{{x.model}}</td>
-                  <td>{{x.type}}</td>
-                  <td>{{x.year}}</td>
-                  <td width="150"><img class="img-responsive" width="150" length="150" ng-src="{{x.image}}"/></td>
-              </tr>
-            </table>
-        
-          </div>
-    
-    </section>
-    <footer class="row">
-      <form class="col-sm-12" id="contact-form" method="post">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Full Name</label>
-          <input type="text" name="fullname" class="form-control" id="exampleInputPassword1" placeholder="Full Name">
-        </div>
-        <div class="form-group">
-          <label for="exampleComment">Leave a comment</label>
-          <textarea class="form-control" name="comment" rows="10" cols="5"></textarea>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-    </footer>
-
-
-    <section class = "row" id ="angular">
-      <h1 class="text-center">Simple Data Binding</h1>
-      <h2>Simple Interest Calculator</h2>
-
-  <div class="col-sm-4">
-        <input type="text" ng-model="username" placeholder="Enter Username Here"/>
-        <h1 ng-bind="username"></h1>
-  </div>      
-
-        <div class="col-sm-4">
-<input type="number" ng-model="principal" placeholder="Enter Your amount"/>
-
-        <input type="number" ng-model="rate" placeholder="Enter rate i.e 8"/>
-
-        <input type="number" ng-model="time" placeholder="Enter time in Years"/>
-        <p ng-bind = "principal"></p>
-        <p ng-bind ="rate" ></p>
-        <p ng-bind ="period" ></p>
-        </div>
-
-        <div class="col-sm-4">
-        <h3>Your principal is: {{principal}}</h3>
-        <input type="number" ng-bind="rate"><h3>Your rate is: {{rate}}</h3>
-        <h3>Your period is: {{time}}</h3>
-        <h3>Your SI is:{{principal*rate*time}}</h3>
-        </div>
-    </section>
-    
-
-<section class="row"> 
-          <div class="col-sm-4"></div>
-
-          <div class="col-sm-4" ng-controller="myCtrl" ng-init="num1=69;num2=30;">  
-            <h2>Product is: {{num1 * num2}}</h2>
+    <div class="container-fluid">
+        <section class="row text-center jumbotron" id="pitch">
+            <h1 id="name">Terence Munene</h1>
+            <a href="#Works" class="btn btn-success">+254 0732 20 72 72</a>
+        </section>
+        <br>
+        <section>
+            <div class="col-sm-12">
+                <div id="tabs">
+                    <h3>My Applications</h3>
+                    <ul>
+                        <li><a href="#tabs-1">fundiApp</a></li>
+                        <li><a href="#tabs-2">OpenSkul</a></li>
+                        <li><a href="#tabs-3">ShambaLink</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <p>FundiApp is an java based app that can run on android designed with the local mason in mind!
+                            <br> It is equipped with all the basic and fundamental tools a mason needs but may not be having access to.
+                            <br> Here is a list of tools available:</P>
+                        <ol>
+                            <li>Calculator</li>
+                            <li>Converter</li>
+                            <li>Measuring tools</li>
+                            <li>Contact list</li>
+                        </ol>
+                    </div>
+                    <div id="tabs-2">
+                        <p>OpenSkul is an android app that assists homed based tuitioning find an appropriate curriculum based on succesful models worldwide.
+                            <br> It indentifies childrens' needs according their age and learning capacity and
+                            <br> recommends an appropriate homebased lesson plan!
+                            <br> This app is available in android, windows and mac os.
+                        </p>
+                    </div>
+                    <div id="tabs-3">
+                        <p>Have you ever wondered wether a piece of property that you're interested in buying is duly registered of any legal and debt issues?</p>
+                        <p>.....Well worry no more! ShambaLink connects you to properties and Land that have been thoroughly checked out through the various
+                            <br> Institutions!
+                            <br> Furthermore, it also shows you the exact co-ordinants of the particular property on google maps.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <h1></h1>
+            <div>
+                <id "open-source-content">
+                    <p class="text-center">Loading .....</a>
+            </div>
+        </section>
+        <section class="row">
+            <h1 class="text-center">Cars Profile</h1>
+            <div class="col-sm-12" ng-controller="myCars">
+                <input align="center" type="text" ng-model="test" />
+                <table align="center" border="3" width="80%">
+                    <tr ng-repeat="x in cars | filter:test">
+                        <td>{{x.brand}}</td>
+                        <td>{{x.model}}</td>
+                        <td>{{x.type}}</td>
+                        <td>{{x.year}}</td>
+                        <td width="150"><img class="img-responsive" width="150" length="150" ng-src="{{x.image}}" /></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <footer class="row">
+            <form class="col-sm-12" id="contact-form" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Full Name</label>
+                    <input type="text" name="fullname" class="form-control" id="exampleInputPassword1" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleComment">Leave a comment</label>
+                    <textarea class="form-control" name="comment" rows="10" cols="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </footer>
+        <section class="row" id="angular">
+            <h1 class="text-center">Simple Data Binding</h1>
+            <h2>Simple Interest Calculator</h2>
+            <div class="col-sm-3">
+                <input type="text" ng-model="username" placeholder="Enter Username Here" />
+                <h1 ng-bind="username"></h1>
+            </div>
+            <div class="col-sm-3">
+                <input type="number" ng-model="principal" placeholder="Enter Your amount" />
+                <input type="number" ng-model="rate" placeholder="Enter rate i.e 8" />
+                <input type="number" ng-model="time" placeholder="Enter time in Years" />
+                <p ng-bind="principal"></p>
+                <p ng-bind="rate"></p>
+                <p ng-bind="period"></p>
+            </div>
+            <div class="col-sm-3">
+                <h3>Your principal is: {{principal}}</h3>
+                <input type="number" ng-bind="rate">
+                <h3>Your rate is: {{rate}}</h3>
+                <h3>Your period is: {{time}}</h3>
+                <h3>Your SI is:{{principal*rate*time}}</h3>
+            </div>
+            <div class="col-sm-3"></div>
+        </section>
+        <section class="row">
+            <div class="col-sm-6" ng-controller="myCtrl" ng-init="num1=69;num2=30;">
+                <h2>Product is: {{num1 * num2}}</h2>
                 <h5>My Phone: {{phone}}</h5>
                 <h5>My Email: {{email}}</h5>
                 <h5>My City:  {{city}}</h5>
                 <h5>My State: {{state}}</h5>
-          </div>
-          <div class="col-sm-4"></div>
-</section>
-
-<section class="row col-sm img-responsive">
-      <a class="col-sm-3" href="https://www.facebook.com/terencegit/" target="_blank">
-        <img class="img-responsive" border="0" alt="facebook" src="bootstrap-3.3.5-dist/images/Facebook-128.png" width="30" height="30">
-        <a class="col-sm-3" href="https://www.twitter.com/terencegit1/" target="_blank">
-          <img class="img-responsive" border="0" alt="twitter" src="bootstrap-3.3.5-dist/images/twitter-128.png" width="30" height="30">
-          <a class="col-sm-3" href="https://www.linkedin.com/" target="_blank">
-            <img class="img-responsive" border="0" alt="linkedin" src="bootstrap-3.3.5-dist/images/linkedin-128.png" width="30" height="30">
-            <a class="col-sm-3" href="https://www.instagram.com/" target="_blank">
-              <img class="img-responsive" border="0" alt="instagram" src="bootstrap-3.3.5-dist/images/instagram-128.png" width="30" height="30">
-    </section>
-    <script src="bootstrap-3.3.5-dist/js/jquery-1.11.3.js"></script>
-    <script src="bootstrap-3.3.5-dist/js/jquerysimple.js"></script>
-    <script src="bootstrap-3.3.5-dist/js/jquery-ui.js"></script>
-    <script src="bootstrap-3.3.5-dist/js/jqueryvalidate.js"></script>
-    <script src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
-    <script src="bootstrap-3.3.5-dist/js/jquerysimpleui.js"></script>
+            </div>
+        </section>
+        <section class="row">
+            <div class="page-header text-center">
+                <h1>Blogs Messages</h1>
+            </div>
+            <div class="col-sm-12" ng-controller="blogsController">
+                <input type="text" ng-model="test">
+                <ul ng-repeat="x in posts | filter:{email:test}">
+                    <li id="mm">{{x.name | uppercase}}</li>
+                    <li>{{x.email}}</li>
+                    <li>{{x.body}}</li>
+                </ul>
+            </div>
+        </section>
+        <section class="row col-sm img-responsive">
+            <a class="col-sm-3" href="https://www.facebook.com/terencegit/" target="_blank">
+                <img class="img-responsive" border="0" alt="facebook" src="bootstrap-3.3.5-dist/images/Facebook-128.png" width="30" height="30">
+                <a class="col-sm-3" href="https://www.twitter.com/terencegit1/" target="_blank">
+                    <img class="img-responsive" border="0" alt="twitter" src="bootstrap-3.3.5-dist/images/twitter-128.png" width="30" height="30">
+                    <a class="col-sm-3" href="https://www.linkedin.com/" target="_blank">
+                        <img class="img-responsive" border="0" alt="linkedin" src="bootstrap-3.3.5-dist/images/linkedin-128.png" width="30" height="30">
+                        <a class="col-sm-3" href="https://www.instagram.com/" target="_blank">
+                            <img class="img-responsive" border="0" alt="instagram" src="bootstrap-3.3.5-dist/images/instagram-128.png" width="30" height="30">
+        </section>
+        <script src="bootstrap-3.3.5-dist/js/jquery-1.11.3.js"></script>
+        <script src="bootstrap-3.3.5-dist/js/jquerysimple.js"></script>
+        <script src="bootstrap-3.3.5-dist/js/jquery-ui.js"></script>
+        <script src="bootstrap-3.3.5-dist/js/jqueryvalidate.js"></script>
+        <script src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+        <script src="bootstrap-3.3.5-dist/js/jquerysimpleui.js"></script>
 </body>
 
 </html>
